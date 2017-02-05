@@ -18,7 +18,7 @@ RAMLIB=avr-ranlib
 SIZEOF=avr-size
 
 Download:all
-	avrdude -p tiny2313 -c usbtiny -D -P -U flash:w:lift.hex:i -v
+	avrdude -p t2313 -c usbtiny -D -P -U flash:w:lift.hex:i -v
 
 all:test.hex
 

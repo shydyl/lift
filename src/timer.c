@@ -32,6 +32,9 @@ int Timer0_init()
 	/* Clear Counter Register */
 	TCNT0 = 0x00;
 
+    /* Enable Timer0 Overflow Interrupt */
+    TIMSK = 0x02;
+
     /* Clear Counter Var */
     Time_Flag_0 = 0;
     Time_Flag_1 = 0;

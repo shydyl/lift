@@ -20,11 +20,13 @@ SIZEOF=avr-size
 Download:all
 	avrdude -p t2313 -c usbtiny -D -P -U flash:w:lift.hex:i -v
 
-all:test.hex
+all:lift.hex
 
-test.hex:test.elf
+lift.hex:lift.elf
 	avr-objcopy lift.elf -O ihex lift.hex
 
-test.elf:
-	$(CC) $(CFLAGS) lift.c -o lift.elf
+lift.elf:timer.o
+	$(CC) $(CFLAGS) lift.c -o lift.
+
+timer.o:
 

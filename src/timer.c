@@ -24,7 +24,7 @@ SOFTWARE.
 
 #include "timer.h"
 
-int Timer0_init()
+void Timer0_init()
 {	
 	/* (CLK_I/O)/256 (From prescaler) */
 	TCCR0B = 0x40;

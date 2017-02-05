@@ -35,4 +35,4 @@ SOFTWARE.
 static int Time_Flag_0;
 static int Time_Flag_1;
 
-int Timer0_init();
+void Timer0_init();

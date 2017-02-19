@@ -26,7 +26,7 @@ lift.hex:lift.elf
 	avr-objcopy lift.elf -O ihex lift.hex
 
 lift.elf:timer.o
-	$(CC) $(CFLAGS) lift.c -o lift.
+	$(CC) $(CFLAGS) lift.c -o lift.elf
 
 timer.o:
 

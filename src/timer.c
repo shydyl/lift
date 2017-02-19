@@ -24,13 +24,16 @@ SOFTWARE.
 
 #include "timer.h"
 
-int Timer0_init()
+void Timer0_init()
 {	
 	/* (CLK_I/O)/256 (From prescaler) */
 	TCCR0B = 0x40;
 
 	/* Clear Counter Register */
 	TCNT0 = 0x00;
+
+    /* Enable Timer0 Overflow Interrupt */
+    TIMSK = 0x02;
 
     /* Clear Counter Var */
     Time_Flag_0 = 0;
